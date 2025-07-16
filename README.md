@@ -70,7 +70,7 @@ To use the Detectron2-backend training localizer script, a character localizatio
 ```bash
 python ./train_effocr_localizer_d2.py \
     --name <W&B run name> \
-    --config <absolute path to D2 config> \
+    --config-file <absolute path to D2 config> \
     --dataset_name <name of Detectron2 dataset to be registered> \
     --dataset_root <absolute path to root dir for COCO formatted data> \
     --train_file <name of COCO JSON training file> \
@@ -163,7 +163,7 @@ python ./infer_effocr_onnx_multi.py \
     --image_dir <path to text line images to be inferenced> \
     --recognizer_dir <directory with saved recognizer model as "enc_best.onnx"> \
     --localizer_dir <directory with saved localizer model as "best_bbox_mAP.onnx"> \
-    --localier_backend <where the localizer model was trained, one of "mmdetection", "yolo", or "detectron2" \
+    --backend <where the localizer model was trained, one of "mmdetection", "yolo", or "detectron2" \
     --lang <e.g., "en" for English or "jp" for Japanese> \
     --localizer_iou_thresh <e.g. 0.01> \
     --localizer_conf_thresh <e.g. 0.35> \
